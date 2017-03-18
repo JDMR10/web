@@ -1,0 +1,23 @@
+<?php 
+
+// iniciamos el buffer al principio de la pagina
+ob_start('comprimir_pagina');
+/* 
+* Contenido de tu web
+*/
+// Ofuscamos el codigo eliminando todos los espacios en blanco
+function comprimir_pagina($buffer)
+{
+	$busca = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s');
+    $reemplaza = array('>','<','\\1');
+    return preg_replace($busca, $reemplaza, $buffer);
+}
+?>
+
+<html>
+<head>
+</head>
+<body>
+HOLA MUNDO
+</body>
+</html>
