@@ -2,8 +2,9 @@
 <head>
 </head>
 <body>
-HOLA MUNDO &#43;
-  
-  &#60h1&#62 hola  &#60&#47h1&#62
+<?php
+$query_string = 'foo=' . urlencode($foo) . '&bar=' . urlencode($bar);
+echo '<a href="mycgi?' . htmlentities($query_string) . '">';
+?>
 </body>
 </html>
