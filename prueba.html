@@ -6,10 +6,12 @@
 $uri = "http://asoconseginf.tk";
   function translate_uri($uri) {
     $parts = explode('/', $uri);
+     echo $parts;
     for ($i = 0; $i < count($parts); $i++) {
       $parts[$i] = rawurlencode($parts[$i]);
     }
     return implode('/', $parts);
+     echo $parts;
 }
                                     ?>
 HOLA MUNDO
