@@ -1,2 +1,2 @@
-  <img height="auto" width="500px" src ="https://github-readme-stats.vercel.app/api/top-langs/?username=jdmr10&hide_progress=truebg_color=fafafa">
+  <img height="auto" width="500px" src ="https://github-readme-stats.vercel.app/api/top-langs/?username=jdmr10&hide_progress=false&bg_color=fafafa">
 
