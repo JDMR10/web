@@ -1,12 +1,3 @@
-# web
-PRUEBA DE WEB PAGES
- 
- 
-pregunta un dato :: buscar
-
-index Hallowen 2022
-
-<a href="hallowen.html">Feliz Hallowen</a>
-
-Feliz Navidad 2023
-
+<p align="center">
+  <img height="100%" width="auto" src ="https://github-readme-stats.vercel.app/api/top-langs/?username=jdmr10&hide_progress=true">
+</p>
