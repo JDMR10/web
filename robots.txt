@@ -1,0 +1,22 @@
+# Bloquea el acceso a todos los rastreadores a la carpeta /privado/
+User-agent: *
+Disallow: /privado/
+
+# Permite a todos los rastreadores el acceso a la carpeta /publico/
+User-agent: *
+Allow: /publico/
+
+# Bloquea todo para el rastreador de Googlebot
+User-agent: Googlebot
+Disallow: /
+
+# Permite a Bingbot el acceso completo al sitio
+User-agent: Bingbot
+Disallow:
+
+# Bloquea el acceso a las páginas de resultados de búsqueda
+User-agent: *
+Disallow: /search
+
+# Especifica la ubicación del sitemap para los rastreadores
+Sitemap: https://https://www.multifarmaciajk.shop/BingSiteAuth.xml
