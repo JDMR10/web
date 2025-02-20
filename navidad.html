@@ -34,26 +34,7 @@
   </head>
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
-    <!-- animacion de nieve -->
-   
-   <img src="nieve.png" id="boat" >
-<style>
-#boat {
-  height: 150px;
-  width: 200px;
-  background:dark;
-  cursor: pointer;
-  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-}
 
-.move {
-  transform: translateY(300px);
-  opacity: 0;
-}
-</style>
-<script>
-  boat.onclick = () => boat.classList.add('move');
-</script>
     <!--<h1>Hello, world!</h1> ->
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -106,6 +87,26 @@
 <div id="imagenes" class="carousel slide" data-bs-ride="carousel">
 
   <div class="carousel-inner">
+        <!-- animacion de nieve -->
+   
+   <img src="nieve.png" id="boat" >
+<style>
+#boat {
+  height: 150px;
+  width: 200px;
+  background:dark;
+  cursor: pointer;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.move {
+  transform: translateY(300px);
+  opacity: 0;
+}
+</style>
+<script>
+  boat.onclick = () => boat.classList.add('move');
+</script>
     <div class="carousel-item active">
   <img src="https://ideogram.ai/api/images/direct/u0EgyFEvRly4fF1LSYsIew.jpg" class="d-block w-100" alt="...">
     </div>
