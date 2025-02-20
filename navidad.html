@@ -17,9 +17,26 @@
     <title>Navidad 2023-2024 !</title>
   </head>
   <body>
+     <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
+
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
+      }
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
     <!-- animacion de nieve -->
    
-
+   <img src="nieve.png" id="boat" >
 <style>
 #boat {
   height: 150px;
@@ -87,7 +104,7 @@
 
 
 <div id="imagenes" class="carousel slide" data-bs-ride="carousel">
-   <img src="nieve.png" id="boat" >
+
   <div class="carousel-inner">
     <div class="carousel-item active">
   <img src="https://ideogram.ai/api/images/direct/u0EgyFEvRly4fF1LSYsIew.jpg" class="d-block w-100" alt="...">
