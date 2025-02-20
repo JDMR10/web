@@ -17,6 +17,23 @@
     <title>Navidad 2023-2024 !</title>
   </head>
   <body>
+    <!-- animacion de nieve -->
+    <img src="https://js.cx/clipart/boat.png" id="boat">
+
+<style>
+#boat {
+  cursor: pointer;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.move {
+  transform: translateX(300px);
+  opacity: 0;
+}
+</style>
+<script>
+  boat.onclick = () => boat.classList.add('move');
+</script>
     <!--<h1>Hello, world!</h1> ->
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -64,22 +81,7 @@
     </div>
   </div>
 </nav>
-<img src="https://js.cx/clipart/boat.png" id="boat">
 
-<style>
-#boat {
-  cursor: pointer;
-  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-}
-
-.move {
-  transform: translateX(300px);
-  opacity: 0;
-}
-</style>
-<script>
-  boat.onclick = () => boat.classList.add('move');
-</script>
 
 <div id="imagenes" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
