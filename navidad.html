@@ -17,7 +17,63 @@
     <title>Navidad 2023-2025 !</title>
   </head>
   <body >
-  
+             <!-- animacion de nieve -->
+   
+<style>
+ body {
+    margin: 0;
+    overflow: hidden; /* Evita que los copos salgan del área visible */
+    background-color: transparent; /* Fondo transparente para simular la noche */ */
+}
+
+#nieve {
+    position: relative;
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Alto completo de la ventana */
+}
+
+.copo {
+    position: absolute; /* Permite posicionar los copos libremente */
+    background-color: #fff; /* Color blanco para los copos */
+    border-radius: 50%; /* Hace que sean redondos */
+    opacity: 0.8; /* Un poco de transparencia para un efecto más suave */
+}
+</style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const nieveContainer = document.getElementById('nieve');
+    const numCopos = 100; // Cantidad de copos de nieve
+
+    // Crear los copos
+    for (let i = 0; i < numCopos; i++) {
+        const copo = document.createElement('div');
+        copo.classList.add('copo');
+        copo.style.width = `${Math.random() * 5 + 2}px`; // Tamaño aleatorio entre 2px y 7px
+        copo.style.height = copo.style.width; // Mantiene la forma circular
+        copo.style.left = `${Math.random() * 100}vw`; // Posición horizontal aleatoria
+        copo.style.top = `${Math.random() * 100}vh`; // Posición vertical inicial aleatoria
+        copo.style.animationDuration = `${Math.random() * 5 + 5}s`; // Velocidad de caída aleatoria
+        nieveContainer.appendChild(copo);
+    }
+});
+
+// Agregar la animación de caída con CSS dinámico
+const styleSheet = document.createElement('style');
+styleSheet.innerHTML = `
+    .copo {
+        animation: caer linear infinite;
+    }
+    @keyframes caer {
+        0% {
+            transform: translateY(-100vh); /* Comienza fuera de la pantalla por arriba */
+        }
+        100% {
+            transform: translateY(100vh); /* Termina fuera de la pantalla por abajo */
+        }
+    }
+`;
+document.head.appendChild(styleSheet);
+</script>
 
     <!--<h1>Hello, world!</h1> ->
 
@@ -103,63 +159,8 @@ myModal.show()
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body bg-success text-white">
-         <!-- animacion de nieve -->
-   
-<style>
- body {
-    margin: 0;
-    overflow: hidden; /* Evita que los copos salgan del área visible */
-  /* background-color: #00FF; /* Fondo transparente para simular la noche */ */
-}
 
-#nieve {
-    position: relative;
-    width: 100vw; /* Ancho completo de la ventana */
-    height: 100vh; /* Alto completo de la ventana */
-}
 
-.copo {
-    position: absolute; /* Permite posicionar los copos libremente */
-    background-color: #fff; /* Color blanco para los copos */
-    border-radius: 50%; /* Hace que sean redondos */
-    opacity: 0.8; /* Un poco de transparencia para un efecto más suave */
-}
-</style>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const nieveContainer = document.getElementById('nieve');
-    const numCopos = 100; // Cantidad de copos de nieve
-
-    // Crear los copos
-    for (let i = 0; i < numCopos; i++) {
-        const copo = document.createElement('div');
-        copo.classList.add('copo');
-        copo.style.width = `${Math.random() * 5 + 2}px`; // Tamaño aleatorio entre 2px y 7px
-        copo.style.height = copo.style.width; // Mantiene la forma circular
-        copo.style.left = `${Math.random() * 100}vw`; // Posición horizontal aleatoria
-        copo.style.top = `${Math.random() * 100}vh`; // Posición vertical inicial aleatoria
-        copo.style.animationDuration = `${Math.random() * 5 + 5}s`; // Velocidad de caída aleatoria
-        nieveContainer.appendChild(copo);
-    }
-});
-
-// Agregar la animación de caída con CSS dinámico
-const styleSheet = document.createElement('style');
-styleSheet.innerHTML = `
-    .copo {
-        animation: caer linear infinite;
-    }
-    @keyframes caer {
-        0% {
-            transform: translateY(-100vh); /* Comienza fuera de la pantalla por arriba */
-        }
-        100% {
-            transform: translateY(100vh); /* Termina fuera de la pantalla por abajo */
-        }
-    }
-`;
-document.head.appendChild(styleSheet);
-</script>
         <iframe width="100%" height="415" src="https://www.youtube.com/embed/hunv2Xklr4Q?si=J6qTRYojJ2i7Ix2d"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div class="modal-footer bg-success text-white">
