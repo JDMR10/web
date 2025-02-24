@@ -21,6 +21,7 @@
    
 <style>
 #nieve {
+    -moz-position:relative;
     -webkit-position:relative;
     position: relative;
     width: 100%; /* Ancho completo de la ventana */
@@ -28,6 +29,7 @@
 }
 
 .copo {
+    -moz-position:absolute;/* Permite posicionar los copos libremente en Firefox o similar */
     -webkit-position:absolute;/* Permite posicionar los copos libremente Chrome o similar */
     position: absolute; /* Permite posicionar los copos libremente */
     background-color: #fff; /* Color blanco para los copos */
@@ -38,7 +40,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
     const nieveContainer = document.getElementById('nieve');
-    const numCopos = 100; // Cantidad de copos de nieve
+    const numCopos = 1994; // Cantidad de copos de nieve
 
     // Crear los copos
     for (let i = 0; i < numCopos; i++) {
